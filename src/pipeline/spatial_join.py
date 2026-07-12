@@ -186,7 +186,7 @@ def main():
     print("SPATIAL JOIN — DEPREM × İL SINIRI EŞLEŞTİRME")
     print("="*50)
 
-    shp_yol    = shapefile_indir()
+    shp_yol = os.path.join(EXT_DIR, "gadm41_TUR_1.shp")
     gdf_iller  = shapefile_yukle(shp_yol)
     df_joined  = spatial_join(gdf_iller)
     istatistik = il_bazinda_istatistik(df_joined)
